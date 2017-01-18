@@ -32,16 +32,16 @@ public class ReturnsActivity extends AppCompatActivity{
 
         WordCounter wordCounter = new WordCounter(sentence);
         int numberOfWords = wordCounter.getNumberOfWords();
+        String occurrences = wordCounter.sortedOccurrences();
         String numberOfWordsString;
         if (numberOfWords == 1) {
             numberOfWordsString = "You entered one word";
         } else {
             numberOfWordsString = "You entered " + numberOfWords + " words";
         }
-
         Log.d(getClass().toString(), numberOfWordsString);
 
-        rText.setText(numberOfWordsString);
+        rText.setText(numberOfWordsString + "\n" + occurrences);
 
     }
 

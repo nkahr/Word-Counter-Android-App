@@ -1,5 +1,6 @@
 package example.codeclan.com.wordcounter;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
@@ -26,7 +27,7 @@ public class WordCounter {
         return wordsArrayList.size();
     }
 
-    public String getWordOccurrences() {
+    public HashMap<String, Integer> getWordOccurrences() {
 
         HashMap<String, Integer> occurrencesMap= new HashMap<String, Integer>();
 
@@ -42,7 +43,36 @@ public class WordCounter {
             }
         }
 
-        return occurrencesMap.toString();
+        return occurrencesMap;
     }
+
+    public String sortedOccurrences() {
+        HashMap<String, Integer> occurrencesMap = getWordOccurrences();
+        ArrayList<String> occurrencesList = new ArrayList<String>();
+        for (String key : occurrencesMap.keySet()) {
+            String entry = occurrencesMap.get(key) + " * " + key;
+            occurrencesList.add(entry);
+        }
+        ArrayList<String> stringList = sortStringList(occurrencesList);
+
+        String string = "";
+        for (String item : stringList) {
+            string += item + "\n";
+        }
+        return string;
+    }
+
+    public ArrayList<String> sortStringList(ArrayList<String> stringList) {
+        Collections.sort(stringList, new Comparator<String>() {
+                    @Override
+                    public int compare(String string1, String string2) {
+                        return string2.compareToIgnoreCase(string1);
+                    }
+                }
+        );
+        return stringList;
+    }
+
+
 
 }

@@ -30,6 +30,18 @@ public class WordCounterTest {
 
     @Test
     public void canMakeHashMap() {
-        assertEquals("{was=6, best=1, times,=2, epoch=2, it=6, the=6, incredulity=1, belief,=1, of=6, worst=1, foolishness,=1, wisdom,=1, age=2}", wordCounter.getWordOccurrences());
+        assertEquals("6 * was\n" +
+                "6 * the\n" +
+                "6 * of\n" +
+                "6 * it\n" +
+                "2 * times,\n" +
+                "2 * epoch\n" +
+                "2 * age\n" +
+                "1 * worst\n" +
+                "1 * wisdom,\n" +
+                "1 * incredulity\n" +
+                "1 * foolishness,\n" +
+                "1 * best\n" +
+                "1 * belief,\n", wordCounter.sortedOccurrences());
     }
 }
