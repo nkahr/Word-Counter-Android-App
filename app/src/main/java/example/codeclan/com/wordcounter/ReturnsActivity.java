@@ -35,13 +35,13 @@ public class ReturnsActivity extends AppCompatActivity{
         String occurrences = wordCounter.sortedOccurrences();
         String numberOfWordsString;
         if (numberOfWords == 1) {
-            numberOfWordsString = "You entered one word";
+            numberOfWordsString = "You entered one word" + "\n\n" + occurrences;
         } else {
-            numberOfWordsString = "You entered " + numberOfWords + " words";
+            numberOfWordsString = "You entered " + numberOfWords + " words"+ "\n\n" + occurrences;
         }
         Log.d(getClass().toString(), numberOfWordsString);
 
-        rText.setText(numberOfWordsString + "\n" + occurrences);
+        rText.setText(numberOfWordsString );
 
     }
 
