@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">WordCounter</string>
+    <string name="main_screen_name">Word Counter</string>
+    <string name="sentence">Type some words...</string>
+    <string name="submit">Submit</string>
+    <string name="returns_activity_title">Word Stats</string>
 </resources>

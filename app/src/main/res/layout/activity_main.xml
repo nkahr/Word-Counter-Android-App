@@ -3,4 +3,22 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <EditText
+        android:id="@+id/sentence_text"
+        android:hint="@string/sentence"
+        android:textSize="30dp"
+        android:layout_marginTop="50dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/count_button"
+        android:text="@string/submit"
+        android:onClick="whenButtonPressed"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="25dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
 </LinearLayout>

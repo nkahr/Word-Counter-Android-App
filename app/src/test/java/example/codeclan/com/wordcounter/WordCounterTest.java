@@ -27,4 +27,9 @@ public class WordCounterTest {
     public void canGetNumberOfWords() {
         assertEquals(36, wordCounter.getNumberOfWords());
     }
+
+    @Test
+    public void canMakeHashMap() {
+        assertEquals("{was=6, best=1, times,=2, epoch=2, it=6, the=6, incredulity=1, belief,=1, of=6, worst=1, foolishness,=1, wisdom,=1, age=2}", wordCounter.getWordOccurrences());
+    }
 }
